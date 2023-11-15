@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
+import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter + Material 3'),
-      ),
+          title: Text(
+        'Flutter + Material 3',
+        style: TextStyle(
+          color: colors.primary,
+        ),
+      )),
       body: const _HomeView(),
     );
   }
@@ -47,7 +53,11 @@ class _CustomListTile extends StatelessWidget {
       ),
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subTitle),
-      onTap: () {},
+      onTap: () {
+        //Navigator.of(context).push(
+        //    MaterialPageRoute(builder: (context) => const ButtonScreen()));
+        Navigator.pushNamed(context, menuItem.link);
+      },
     );
   }
 }
