@@ -14,7 +14,7 @@ class ButtonScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.arrow_back_ios_new_rounded),
           onPressed: () {
-            context.pop();
+            GoRouter.of(context).pop();
           }),
     );
   }
@@ -81,6 +81,7 @@ class _ButtonView extends StatelessWidget {
                 backgroundColor: MaterialStatePropertyAll(color.primary),
                 iconColor: const MaterialStatePropertyAll(Colors.white)),
           ),
+          const CustomButton(),
         ],
       ),
     );

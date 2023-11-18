@@ -57,7 +57,7 @@ class _CustomListTile extends StatelessWidget {
         //Navigator.of(context).push(
         //    MaterialPageRoute(builder: (context) => const ButtonScreen()));
         //Navigator.pushNamed(context, menuItem.link);
-        context.go(menuItem.link);
+        GoRouter.of(context).push(menuItem.link);
       },
     );
   }
