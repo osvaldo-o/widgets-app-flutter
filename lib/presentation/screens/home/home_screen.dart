@@ -9,6 +9,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
+    final scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
       appBar: AppBar(
           title: Text(
@@ -18,7 +19,9 @@ class HomeScreen extends StatelessWidget {
         ),
       )),
       body: const _HomeView(),
-      drawer: const SlideMenu(),
+      drawer: SlideMenu(
+        scaffoldKey: scaffoldKey,
+      ),
     );
   }
 }
