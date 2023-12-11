@@ -55,4 +55,10 @@ const List<MenuItem> appMenuItems = [
     link: '/infinite',
     icon: Icons.list_alt_rounded,
   ),
+  MenuItem(
+    title: 'Counter screen',
+    subTitle: 'Counter with riverPod',
+    link: '/counter',
+    icon: Icons.add,
+  ),
 ];
